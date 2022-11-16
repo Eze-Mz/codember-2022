@@ -1,50 +1,25 @@
-async function fixUsers() {
+const REQUIRED_FIELDS = ["usr", "eme", "psw", "age", "loc", "fll"];
+
+async function getValidUsers() {
   const data = await fetch("https://codember.dev/users.txt").then((res) =>
     res.text()
   );
   const users = data
-    //split when encounter 2 whitespace character (spaces, tabs, line breaks).
-    .split(/\s\s/g)
-    //remove all line breaks and carriage return
-    .map((user) => user.replace(/(\r\n|\n|\r)/gm, ""));
+    //split string on double newline
+    .split("\n\n")
+    //remove newlines in every user
+    .map((user) => user.replaceAll("\n", " "));
 
-  const problemArray = [];
-  users.forEach((user, i) => {
-    let matches = user.match(/usr/g);
-    if (matches.length === 2) {
-      problemArray.push(user);
-    }
-  });
-  500;
-
-  const allEqual = (arr) => arr.every((v) => v === arr[0]);
-
-  //console.log(problemArray);
-
-  const corrupted = [];
-  const solution = [];
-  function check(user) {
-    return (
-      user.includes("usr:") &&
-      user.includes("age:") &&
-      user.includes("eme:") &&
-      user.includes("psw:") &&
-      user.includes("loc:") &&
-      user.includes("fll:")
-    );
+  function checkUser(user) {
+    //check if the user includes every field
+    return REQUIRED_FIELDS.every((field) => user.includes(field));
   }
 
-  users.forEach((user) => {
-    if (check(user)) {
-      solution.push(user);
-    } else {
-      corrupted.push(user);
-    }
-  });
+  const validUsers = users.filter((user) => checkUser(user));
 
-  console.log("corrupted: " + corrupted.length);
-  console.log("valid: " + solution.length + problemArray.length);
-  console.log("last valid: " + solution[solution.length - 1]);
+  const [, lastUsername] = validUsers.at(-1).match(/usr:(@\w+)/);
+
+  console.log(`${validUsers.length}${lastUsername}`);
 }
 
-fixUsers();
+getValidUsers();
