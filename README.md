@@ -9,11 +9,11 @@
  \/____/ \/___/  \/__,_ / \/____/ \/_/\/_/\/_/  \/___/  \/____/  \/_/
 ```
 
-My solutions for the challenges from https://codember.dev/
+My solutions for the challenges from https://codember.dev/ by [@midudev](https://github.com/midudev)
 
 ## Challenges
 
-| Challenge | Name                                                    |                                          |
-| --------- | ------------------------------------------------------- | ---------------------------------------- |
-| 1         | [Fix Twitter!](./challenges01/README.md)                | [solution](./challenge01/challenge01.js) |
-| 2         | [Catch those cybercriminals!](./challenges02/README.md) | [solution](./challenge02/challenge02.js) |
+| Challenge | Name                                                   |                                          |
+| --------- | ------------------------------------------------------ | ---------------------------------------- |
+| 1         | [Fix Twitter!](./challenge01/README.md)                | [solution](./challenge01/challenge01.js) |
+| 2         | [Catch those cybercriminals!](./challenge02/README.md) | [solution](./challenge02/challenge02.js) |
