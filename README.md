@@ -17,3 +17,5 @@ My solutions for the challenges from https://codember.dev/ by [@midudev](https:/
 | --------- | ------------------------------------------------------ | ---------------------------------------- |
 | 1         | [Fix Twitter!](./challenge01/README.md)                | [solution](./challenge01/challenge01.js) |
 | 2         | [Catch those cybercriminals!](./challenge02/README.md) | [solution](./challenge02/challenge02.js) |
+| 3         | [Zebra of colors](./challenge03/README.md)             | [solution](./challenge03/challenge03.js) |
+| 4         | [Dude, I lost my password](./challenge04/README.md)    | [solution](./challenge04/challenge04.js) |
