@@ -7,7 +7,8 @@
     "c-1": "node ./challenge01/challenge01.js",
     "c-2": "node ./challenge02/challenge02.js",
     "c-3": "node ./challenge03/challenge03.js",
-    "c-4": "node ./challenge04/challenge04.js"
+    "c-4": "node ./challenge04/challenge04.js",
+    "c-5": "node ./challenge05/challenge05.js"
   },
   "author": "",
   "license": "ISC"
